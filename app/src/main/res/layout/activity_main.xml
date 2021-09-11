@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+ android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="Fitness First"
+            app:titleMarginStart="143dp"
+            app:titleTextColor="@color/black" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/main_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titlebar"
+        android:layout_above="@id/bottom_navigation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/main_linearlayout">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="30dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/cardback"
+                    android:id="@+id/linearlayout1"
+                    android:padding="30dp">
+
+                    <ImageView
+                        android:id="@+id/imageView_dcc"
+                        android:layout_width="match_parent"
+                        android:layout_height="330dp"
+                        app:srcCompat="@drawable/dcc"
+                        android:scaleType="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/textView_dcc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/daily_calorie_counter"
+                        android:textAlignment="center"
+                        android:textSize="30sp"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="italic"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/cardback"
+                    android:id="@+id/linearlayout2"
+                    android:padding="30dp">
+
+                    <ImageView
+                        android:id="@+id/image_bmr"
+                        android:layout_width="match_parent"
+                        android:layout_height="330dp"
+                        app:srcCompat="@drawable/bmr"
+                        android:scaleType="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/textView_bmr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Basic Metabolic Rate"
+                        android:textAlignment="center"
+                        android:textSize="30sp"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="italic"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/cardback"
+                    android:id="@+id/linearlayout3"
+                    android:padding="30dp">
+
+                    <ImageView
+                        android:id="@+id/imageView_iwc"
+                        android:layout_width="match_parent"
+                        android:layout_height="330dp"
+                        app:srcCompat="@drawable/iwc"
+                        android:scaleType="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/textView_iwc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ideal Weight Calculator"
+                        android:textAlignment="center"
+                        android:textSize="30sp"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="italic"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/cardback"
+                    android:id="@+id/linearlayout4"
+                    android:padding="30dp">
+
+                    <ImageView
+                        android:id="@+id/imageView_bfp"
+                        android:layout_width="match_parent"
+                        android:layout_height="330dp"
+                        app:srcCompat="@drawable/bfp"
+                        android:scaleType="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/textView_bfp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Body Fat Percentage"
+                        android:textAlignment="center"
+                        android:textSize="30sp"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="italic"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/cardback"
+                    android:id="@+id/linearlayout5"
+                    android:padding="30dp">
+
+                    <ImageView
+                        android:id="@+id/imageView_dpi"
+                        android:layout_width="match_parent"
+                        android:layout_height="330dp"
+                        app:srcCompat="@drawable/dpi"
+                        android:scaleType="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/textView_dpi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Daily Protein Intake"
+                        android:textAlignment="center"
+                        android:textSize="30sp"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="italic"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/cardback"
+                    android:id="@+id/linearlayout6"
+                    android:padding="30dp">
+
+                    <ImageView
+                        android:id="@+id/imageView_dc"
+                        android:layout_width="match_parent"
+                        android:layout_height="330dp"
+                        app:srcCompat="@drawable/dc"
+                        android:scaleType="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/textView_dc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Diet Charts"
+                        android:textAlignment="center"
+                        android:textSize="30sp"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="italic"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_navigation"
+        app:menu="@menu/bottom_nav"
+        android:elevation="45dp"/>
+</RelativeLayout>
